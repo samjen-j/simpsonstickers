@@ -1,8 +1,8 @@
 #!/bin/bash
 
-curl --silent --location https://rpm.nodesource.com/setup_14.x | sudo bash -
-npm install
-sudo yum install -y nodejs
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install node
 
 DIR="/home/ec2-user/simpsons-app"
 if [ -d "$DIR" ]; then
